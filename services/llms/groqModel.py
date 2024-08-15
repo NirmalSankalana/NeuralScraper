@@ -4,11 +4,11 @@ from dotenv import dotenv_values
 
 from utils.jsonReader import getPrompt
 
+
 client = Groq(
     api_key=dotenv_values(".env")['GROQ_API_KEY'],
 )
 
-print(client)
 
 chat_completion = client.chat.completions.create(
     messages=[
